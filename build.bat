@@ -1,0 +1,41 @@
+REM Copyright (C) 2023 Elpha Secure Inc.
+
+@echo off
+SETLOCAL
+if not defined MSVC_PATH (
+SET MSVC_PATH="C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\Bin"
+)
+
+set SRC_DIR=%cd%
+echo "SRC_DIR[%SRC_DIR%]"
+set ARG="%1"
+set ARCH_TYPE="Win32"
+set OUT_DIR="%SRC_DIR%\build-win"
+
+if %ARG%=="x64" (
+    set ARCH_TYPE="x64"
+)
+
+rd /s /q build-win
+msbuild %SRC_DIR%\win\base.sln /t:Rebuild /p:Configuration=Release /p:Platform=%ARCH_TYPE% /p:OutDir=%OUT_DIR% -fl -flp:logfile=buildLog\agentBuild_%ARCH_TYPE%.log
+IF NOT errorlevel 0 (
+	echo "Failed to build base"
+	goto FAIL
+)
+
+xcopy /E /I /Y "%SRC_DIR%\src\*.h" "%OUT_DIR%\include\"
+
+IF NOT errorlevel 0 (
+	echo "Failed to build base"
+	goto FAIL
+)
+
+:END
+echo "Agent build finished"
+goto EXIT
+
+:FAIL
+echo "Build Failed"
+
+ENDLOCAL
+:EXIT
