@@ -16,7 +16,7 @@ Notes:
 3) In order to regenrate the fresh base.sln file use follwing command:
 
  gyp --depth=. base.gyp -f msvs -G msvs_version=2022 --generator-output=win -I src/build/common.gypi<br/>
- (Freshly generated base.sln will not x64 configuration, needs to be added manually through sln file.)
+ (Freshly generated base.sln will not have x64 configuration, needs to be added manually through sln file.)
  
  gyp location: https://github.com/elphasecure/gyp
  
