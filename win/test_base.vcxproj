@@ -62,6 +62,7 @@
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
       <TreatWarningAsError>false</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <AdditionalDependencies>advapi32.lib;dbgHelp.lib;ole32.lib;shell32.lib;user32.lib;ws2_32.lib</AdditionalDependencies>
@@ -87,6 +88,7 @@
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
       <TreatWarningAsError>false</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <AdditionalDependencies>advapi32.lib;dbgHelp.lib;ole32.lib;shell32.lib;user32.lib;ws2_32.lib</AdditionalDependencies>
@@ -112,6 +114,7 @@
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
       <TreatWarningAsError>false</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <AdditionalDependencies>advapi32.lib;dbgHelp.lib;ole32.lib;shell32.lib;user32.lib;ws2_32.lib</AdditionalDependencies>
@@ -137,6 +140,7 @@
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
       <TreatWarningAsError>false</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <AdditionalDependencies>advapi32.lib;dbgHelp.lib;ole32.lib;shell32.lib;user32.lib;ws2_32.lib</AdditionalDependencies>
